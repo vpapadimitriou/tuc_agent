@@ -11,7 +11,7 @@ public class GetMessageAsVector {
 	public GetMessageAsVector(){
 
 		
-////comment motherfucker
+
 	}
 
 

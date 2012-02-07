@@ -36,7 +36,7 @@ public class Perceptors {
 					ServerTime.setName(message.elementAt(i+1).toString());
 					float time = Float.parseFloat(message.elementAt(i+2).toString());
 					ServerTime.setTime(time);
-					System.out.println("time @ "+i);
+					//System.out.println("time @ "+i);
 					i=i+3;
 
 				}else if (message.elementAt(i).equalsIgnoreCase("B")){
@@ -48,7 +48,7 @@ public class Perceptors {
 					Ball.setAngleX(angleX);
 					float angleY = Float.parseFloat(message.elementAt(i+4).toString());
 					Ball.setAngleY(angleY);
-					System.out.println("ball @ "+i);
+					//System.out.println("ball @ "+i);
 					i=i+5;
 
 				}else if (message.elementAt(i).equalsIgnoreCase("GS")){
@@ -56,7 +56,7 @@ public class Perceptors {
 					float time = Float.parseFloat(message.elementAt(i+2).toString());
 					GameState.setGameTime(time);
 					GameState.setGameState(message.elementAt(i+4).toString());
-					System.out.println("game state @ "+i);
+					//System.out.println("game state @ "+i);
 					i=i+5;
 
 				}else if (message.elementAt(i).equalsIgnoreCase("GYR")){
@@ -67,7 +67,7 @@ public class Perceptors {
 					GyroScope.setAngleY(angley);
 					float anglez = Float.parseFloat(message.elementAt(i+6).toString());
 					GyroScope.setAngleZ(anglez);
-					System.out.println("gyroscope @ "+i);
+					//System.out.println("gyroscope @ "+i);
 					i=i+7;
 
 				}else if (message.elementAt(i).equalsIgnoreCase("ACC")){
@@ -78,7 +78,7 @@ public class Perceptors {
 					Accelerometer.setAccX(accY);
 					float accZ = Float.parseFloat(message.elementAt(i+6).toString());
 					Accelerometer.setAccX(accZ);
-					System.out.println("accelerometer @ "+i);
+					//System.out.println("accelerometer @ "+i);
 					i=i+7;
 
 
@@ -86,7 +86,7 @@ public class Perceptors {
 
 
 
-					System.out.println("univ joint @ "+i);
+					//System.out.println("univ joint @ "+i);
 					i=i+1;
 					
 					
@@ -94,28 +94,95 @@ public class Perceptors {
 
 
 
-					System.out.println("touch perceptor @ "+i);
+					//System.out.println("touch perceptor @ "+i);
 					i=i+1;
 
 				}else if (message.elementAt(i).equalsIgnoreCase("HJ")){
+					
+					if(message.elementAt(i+2).equalsIgnoreCase("hj1")){
+						float axis = Float.parseFloat(message.elementAt(i+4).toString());
+						HingeJointPerceptor.setHj1(axis);
+					}else if(message.elementAt(i+2).equalsIgnoreCase("hj2")){
+						float axis = Float.parseFloat(message.elementAt(i+4).toString());
+						HingeJointPerceptor.setHj2(axis);
+					}else if(message.elementAt(i+2).equalsIgnoreCase("laj1")){
+						float axis = Float.parseFloat(message.elementAt(i+4).toString());
+						HingeJointPerceptor.setLaj1(axis);
+					}else if(message.elementAt(i+2).equalsIgnoreCase("laj2")){
+						float axis = Float.parseFloat(message.elementAt(i+4).toString());
+						HingeJointPerceptor.setLaj2(axis);
+					}else if(message.elementAt(i+2).equalsIgnoreCase("laj3")){
+						float axis = Float.parseFloat(message.elementAt(i+4).toString());
+						HingeJointPerceptor.setLaj3(axis);
+					}else if(message.elementAt(i+2).equalsIgnoreCase("laj4")){
+						float axis = Float.parseFloat(message.elementAt(i+4).toString());
+						HingeJointPerceptor.setLaj4(axis);
+					}else if(message.elementAt(i+2).equalsIgnoreCase("llj1")){
+						float axis = Float.parseFloat(message.elementAt(i+4).toString());
+						HingeJointPerceptor.setLlj1(axis);
+					}else if(message.elementAt(i+2).equalsIgnoreCase("llj2")){
+						float axis = Float.parseFloat(message.elementAt(i+4).toString());
+						HingeJointPerceptor.setLlj2(axis);
+					}else if(message.elementAt(i+2).equalsIgnoreCase("llj3")){
+						float axis = Float.parseFloat(message.elementAt(i+4).toString());
+						HingeJointPerceptor.setLlj3(axis);
+					}else if(message.elementAt(i+2).equalsIgnoreCase("llj4")){
+						float axis = Float.parseFloat(message.elementAt(i+4).toString());
+						HingeJointPerceptor.setLlj4(axis);
+					}else if(message.elementAt(i+2).equalsIgnoreCase("llj5")){
+						float axis = Float.parseFloat(message.elementAt(i+4).toString());
+						HingeJointPerceptor.setLlj5(axis);
+					}else if(message.elementAt(i+2).equalsIgnoreCase("llj6")){
+						float axis = Float.parseFloat(message.elementAt(i+4).toString());
+						HingeJointPerceptor.setLlj6(axis);
+					}else if(message.elementAt(i+2).equalsIgnoreCase("rlj1")){
+						float axis = Float.parseFloat(message.elementAt(i+4).toString());
+						HingeJointPerceptor.setRlj1(axis);
+					}else if(message.elementAt(i+2).equalsIgnoreCase("rlj2")){
+						float axis = Float.parseFloat(message.elementAt(i+4).toString());
+						HingeJointPerceptor.setRlj2(axis);
+					}else if(message.elementAt(i+2).equalsIgnoreCase("rlj3")){
+						float axis = Float.parseFloat(message.elementAt(i+4).toString());
+						HingeJointPerceptor.setRlj3(axis);
+					}else if(message.elementAt(i+2).equalsIgnoreCase("rlj4")){
+						float axis = Float.parseFloat(message.elementAt(i+4).toString());
+						HingeJointPerceptor.setRlj4(axis);
+					}else if(message.elementAt(i+2).equalsIgnoreCase("rlj5")){
+						float axis = Float.parseFloat(message.elementAt(i+4).toString());
+						HingeJointPerceptor.setRlj5(axis);
+					}else if(message.elementAt(i+2).equalsIgnoreCase("rlj6")){
+						float axis = Float.parseFloat(message.elementAt(i+4).toString());
+						HingeJointPerceptor.setRlj6(axis);
+					}else if(message.elementAt(i+2).equalsIgnoreCase("raj1")){
+						float axis = Float.parseFloat(message.elementAt(i+4).toString());
+						HingeJointPerceptor.setRaj1(axis);
+					}else if(message.elementAt(i+2).equalsIgnoreCase("raj2")){
+						float axis = Float.parseFloat(message.elementAt(i+4).toString());
+						HingeJointPerceptor.setRaj2(axis);
+					}else if(message.elementAt(i+2).equalsIgnoreCase("raj3")){
+						float axis = Float.parseFloat(message.elementAt(i+4).toString());
+						HingeJointPerceptor.setRaj3(axis);
+					}else if(message.elementAt(i+2).equalsIgnoreCase("raj4")){
+						float axis = Float.parseFloat(message.elementAt(i+4).toString());
+						HingeJointPerceptor.setRaj4(axis);
+					}
 
 
-
-					System.out.println("hint joint @ "+i);
-					i=i+1;
+					//System.out.println("hint joint @ "+i);
+					i=i+5;
 
 				}else if (message.elementAt(i).equalsIgnoreCase("hear")){
 
 
 
-					System.out.println("hear perceptor @ "+i);
+					//System.out.println("hear perceptor @ "+i);
 					i=i+1;
 
 				}else if (message.elementAt(i).equalsIgnoreCase("see")){
 
 
 
-					System.out.println("see perceptor @ "+i);
+					//System.out.println("see perceptor @ "+i);
 					i=i+1;
 
 				}else if (message.elementAt(i).equalsIgnoreCase("FRP")){
@@ -131,7 +198,7 @@ public class Perceptors {
 					force.z=Float.parseFloat(message.elementAt(i+10).toString());
 					ForceResistancePerceptor.setForceOrigin(forceOr);
 					ForceResistancePerceptor.setForce(force);
-					System.out.println("force res perce @ "+i);
+					//System.out.println("force res perce @ "+i);
 					i=i+11;
 
 
